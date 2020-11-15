@@ -1,0 +1,53 @@
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-container {
+  color: #dfe3e8;
+  text-align: center;
+  width: 90%;
+}
+
+.form-join {
+  display: flex;
+  justify-content: center;
+}
+
+.input-name {
+  display: block;
+  outline: none;
+  border: none;
+  font-size: 1.25rem;
+  line-height: 3rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.btn-join a {
+  outline: none;
+  border: none;
+  background: #8a9093;
+  color: #dfe3e8;
+  text-decoration: none;
+  display: block;
+  padding: 1rem 2rem;
+}
+
+.btn-join a:hover {
+  background: #8a909390;
+}
+
+@media (min-width: 768px) {
+  .home-container {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-container {
+    width: 30%;
+  }
+}
