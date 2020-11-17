@@ -1,0 +1,45 @@
+.chat-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-content {
+  background: #bbb;
+  height: 100%;
+  width: 100%;
+}
+
+.message {
+  background: #8a9093;
+}
+
+/*TODO: Form to send a message */
+.form-send {
+  display: flex;
+}
+
+.form-send input {
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: 100%;
+}
+
+.form-send button {
+  border: none;
+  outline: none;
+  background: #8a9093;
+  color: #dfe3e8;
+  padding: 0 2rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.form-send button:hover {
+  background: #8a909390;
+}
