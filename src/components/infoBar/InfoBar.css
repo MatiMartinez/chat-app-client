@@ -1,0 +1,25 @@
+.infobar {
+  color: #dfe3e8;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-exit {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  background: #8a9093;
+  color: #dfe3e8;
+  border-radius: 2.5px;
+  text-decoration: none;
+}
+
+.btn-exit:hover {
+  background: #dfe3e8;
+  color: #8a9093;
+}

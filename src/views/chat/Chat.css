@@ -5,16 +5,6 @@
   flex-direction: column;
 }
 
-.chat-content {
-  background: #bbb;
-  height: 100%;
-  width: 100%;
-}
-
-.message {
-  background: #8a9093;
-}
-
 /*TODO: Form to send a message */
 .form-send {
   display: flex;
