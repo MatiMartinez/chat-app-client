@@ -3,7 +3,6 @@ import React from "react";
 import ReactEmoji from "react-emoji";
 
 export default function Message({ message: { user, text }, name }) {
-  console.log(text);
   let currentUser = false;
 
   const trimmedName = name.trim().toLowerCase();
