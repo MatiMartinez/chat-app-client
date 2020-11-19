@@ -11,23 +11,28 @@ export default function Chat({ location }) {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
-  const endpoint = "localhost:4000";
+  const [users, setUsers] = useState([]);
+  const ENDPOINT = process.env.REACT_APP_SERVER;
 
   useEffect(() => {
     const { name } = queryString.parse(location.search);
     setName(name);
 
-    socket = io(endpoint);
+    socket = io(ENDPOINT);
     socket.emit("join", { name }, (error) => {
       if (error) {
-        alert(error);
+        console.log(error);
       }
     });
-  }, [endpoint, location.search]);
+  }, [ENDPOINT, location.search]);
 
   useEffect(() => {
     socket.on("message", (message) => {
       setMessages((messages) => [...messages, message]);
+    });
+
+    socket.on("users", ({ users }) => {
+      setUsers(users);
     });
   }, []);
 
@@ -43,7 +48,7 @@ export default function Chat({ location }) {
   return (
     <div className="main-container">
       <div className="chat-container">
-        <InfoBar name={name} socket={socket} />
+        <InfoBar name={name} users={users} />
         <Messages messages={messages} name={name} />
         <div className="form-send">
           <input
