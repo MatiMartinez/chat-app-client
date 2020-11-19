@@ -18,7 +18,9 @@ export default function Chat({ location }) {
     const { name } = queryString.parse(location.search);
     setName(name);
 
-    socket = io(ENDPOINT);
+    socket = io(ENDPOINT, {
+      transports: ["websocket", "polling"],
+    });
     socket.emit("join", { name }, (error) => {
       if (error) {
         console.log(error);
